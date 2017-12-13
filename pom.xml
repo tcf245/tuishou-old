@@ -13,6 +13,7 @@
         <module>weibo-login</module>
         <module>tuishou-common</module>
         <module>weibo-api</module>
+        <module>tuishou-test</module>
     </modules>
 
     <dependencies>
