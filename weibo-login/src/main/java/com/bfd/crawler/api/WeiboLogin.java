@@ -1,4 +1,4 @@
-package com.bfd.crawler;
+package com.bfd.crawler.api;
 
 import com.bfd.crawler.utils.OkHttpUtils;
 import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
@@ -22,6 +22,12 @@ public class WeiboLogin {
     private static String ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36";
     private static String loginUrl = "http://login.sina.com.cn/sso/login.php?client=ssologin.js(v1.4.18)";
 
+    /**
+     * 微博登陆
+     * @param user
+     * @param passwd
+     * @return
+     */
     public String getCookie(String user, String passwd){
         String su = null;
         try {

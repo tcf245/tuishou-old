@@ -1,6 +1,6 @@
-package com.bfd.crawler;
+package com.bfd.crawler.weibo;
 
-public class Weibo {
+public class WeiboAccount {
     private String user;
     private String passwd;
     private String cookie;
@@ -8,7 +8,7 @@ public class Weibo {
     private String ip;
     private int port;
 
-    public Weibo(String user, String passwd, String cookie, String ip, int port) {
+    public WeiboAccount(String user, String passwd, String cookie, String ip, int port) {
         this.user = user;
         this.passwd = passwd;
         this.cookie = cookie;

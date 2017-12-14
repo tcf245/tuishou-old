@@ -1,5 +1,6 @@
-package com.bfd.crawler;
+package com.bfd.crawler.api;
 
+import com.bfd.crawler.StringUtil;
 import com.bfd.crawler.utils.OkHttpUtils;
 import com.google.gson.Gson;
 import org.slf4j.Logger;
@@ -14,6 +15,13 @@ public class WeiboForward {
     private static Gson gson = new Gson();
 
 
+    /**
+     * 微博转发
+     * @param content
+     * @param uid
+     * @param cookie
+     * @param mid
+     */
     public void forward(String content,String uid, String cookie,String mid){
         String forwardurl = "https://weibo.com/aj/v6/mblog/forward?ajwvr=6";//&domain=" + uid + "&__rnd=" + System.currentTimeMillis();
 

@@ -1,4 +1,4 @@
-package com.bfd.crawler;
+package com.bfd.crawler.api;
 
 import com.bfd.crawler.utils.OkHttpUtils;
 import com.google.gson.Gson;
@@ -15,6 +15,11 @@ public class WeiboObjectlike {
     private static final Logger LOG = LoggerFactory.getLogger(WeiboObjectlike.class);
     private static final Gson gson = new Gson();
 
+    /**
+     * 评论点赞
+     * @param objectid
+     * @param cookie
+     */
     public void objectlike(String objectid,String cookie){
         String commenturl = "https://d.weibo.com/aj/v6/like/objectlike?ajwvr=6&__rnd=" + System.currentTimeMillis();
 

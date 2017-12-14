@@ -1,5 +1,6 @@
-package com.bfd.crawler;
+package com.bfd.crawler.api;
 
+import com.bfd.crawler.StringUtil;
 import com.bfd.crawler.utils.OkHttpUtils;
 import com.google.gson.Gson;
 import org.slf4j.Logger;
@@ -8,15 +9,16 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * weibo-api
- *
- *
- */
-public class WeiboController {
-    private static final Logger LOG = LoggerFactory.getLogger(WeiboController.class);
+public class WeiboAdd {
+    private static final Logger LOG = LoggerFactory.getLogger(WeiboAdd.class);
     private static final Gson gson = new Gson();
 
+    /**
+     * 撰写微博
+     * @param content
+     * @param cookie
+     * @return
+     */
     public String add(String content,String cookie){
         String commenturl = "https://weibo.com/aj/mblog/add?ajwvr=6&__rnd=" + System.currentTimeMillis();
 
@@ -75,7 +77,5 @@ public class WeiboController {
         params.put("_t","0");
         return params;
     }
-
-
 
 }

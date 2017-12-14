@@ -1,18 +1,21 @@
-package com.bfd.crawler;
+package com.bfd.crawler.api;
 
+import com.bfd.crawler.StringUtil;
 import com.bfd.crawler.utils.OkHttpUtils;
 import com.google.gson.Gson;
-import jdk.nashorn.internal.runtime.ParserException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-public class WeiboAdd {
-    private static final Logger LOG = LoggerFactory.getLogger(WeiboAdd.class);
+/**
+ * weibo-api
+ *
+ *
+ */
+public class WeiboController {
+    private static final Logger LOG = LoggerFactory.getLogger(WeiboController.class);
     private static final Gson gson = new Gson();
 
     public String add(String content,String cookie){
@@ -73,5 +76,7 @@ public class WeiboAdd {
         params.put("_t","0");
         return params;
     }
+
+
 
 }
