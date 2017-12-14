@@ -49,4 +49,9 @@ public class HotParse implements WeiboParser{
         }
         return "";
     }
+
+    public static void main(String[] args) {
+        
+    }
+
 }
