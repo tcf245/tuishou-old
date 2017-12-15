@@ -13,6 +13,13 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.mozilla</groupId>
+            <artifactId>chardet</artifactId>
+            <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../libs/chardet.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>utils-0.0.1-SNAPSHOT</groupId>
             <artifactId>system-utils-0.0.1-SNAPSHOT</artifactId>
             <version>1.0.0</version>

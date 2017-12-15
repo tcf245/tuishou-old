@@ -41,11 +41,10 @@ public class OkHttpUtils {
             response = client.newCall(request).execute();
             LOG.info(request.url() + " => get status code is " + response.code());
 
-//            byte[] bytes = response.body().bytes();
-////            String encode = EncodeUtil.getHtmlEncode(bytes);
-//            String encode = "gbk";
-            return response.isSuccessful() ? response.body().string(): "";
-
+            byte[] bytes = response.body().bytes();
+            String encode = EncodeUtil.getHtmlEncode(bytes);
+            LOG.info("get encode : " + encode);
+            return new String(bytes,encode);
         }finally {
             if (response != null)
                 response.close();
@@ -205,4 +204,9 @@ public class OkHttpUtils {
         }
     }
 
+
+    public static void main(String[] args) throws Exception {
+        String content = doGet("http://www.weibo.com",null,null,0);
+        System.out.println(content);
+    }
 }
